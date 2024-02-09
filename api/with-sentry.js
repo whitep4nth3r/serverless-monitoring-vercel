@@ -30,7 +30,7 @@ export default async function handler(req, res) {
     }
 
     const response = await fetch(
-      "https://pokeapi.c/api/v2/pokemon?limit=100000&offset=0",
+      "https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0",
     );
 
     const data = await response.json();
