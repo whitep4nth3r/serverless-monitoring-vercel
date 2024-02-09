@@ -3,5 +3,6 @@
     "@sentry/node": "^7.100.1",
     "@sentry/profiling-node": "^7.100.1",
     "@sentry/vercel-edge": "^7.100.1"
-  }
+  },
+  "license": "MIT"
 }
