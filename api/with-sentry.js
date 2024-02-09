@@ -15,6 +15,8 @@ function sortByNameAsc(a, b) {
 // NOT cached by default: https://vercel.com/docs/edge-network/caching
 
 export default async function handler(req, res) {
+  console.log("Starting with-sentry");
+
   const startTime = performance.now();
   Sentry.init({
     dsn: "https://db6121e8bd7e232482b48a01223b855d@o4505635661873152.ingest.sentry.io/4506717174824960",
@@ -22,6 +24,11 @@ export default async function handler(req, res) {
   });
 
   try {
+    console.log("in the try");
+    if (Sentry !== undefined) {
+      console.log("SENTRY NOT UNDEFINED");
+    }
+
     const response = await fetch(
       "https://pokeapi.c/api/v2/pokemon?limit=100000&offset=0",
     );
